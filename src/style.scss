@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: Inter;
+}
+
+$grey-color: #D0D5DD;
+$black-color: #344054;
+$white-color: #ffffff;
+$yellor-color: #FFC857;
+
+@mixin app-flex($ai, $jc, $dp: flex, $fd: row) {
+  display: $dp;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+}
+
+@mixin app-font($fz, $lh, $fw: 400) {
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+}
+
+.app {
+  background-color: $black-color;
+  min-height: 100vh;
+  @include app-flex(center, center);
+}
+
+.app__content {
+  width: 100%;
+  max-width: 478px;
+  height: 834px;
+  padding: 60px;
+  background-color: $white-color;
+  border-radius: 10px;
+}
+
+.app__heading {
+  margin-bottom: 25px;
+  @include app-font(28px, 34px, 700);
+  color: $black-color;
+}
+
+.app__item {
+  padding: 23px;
+  display: flex;
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+
+.app__item-content {
+  @include app-flex(center, flex-start);
+  gap: 14px;
+}
+
+.app__item-checkbox-span {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: $grey-color;
+  transition: all ease .4s;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.app__item-checkbox {
+  .app__item-checkbox-input:checked + .app__item-checkbox-span {
+    background-image: url(./assets/ok.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $black-color;
+  }
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+
+.app__item-heading {
+  @include app-font(18px, 22px);
+  color: $black-color;
+}
