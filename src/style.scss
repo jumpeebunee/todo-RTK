@@ -44,8 +44,9 @@ $yellor-color: #FFC857;
 }
 
 .app__item {
-  padding: 23px;
+  width: 100%;
   display: flex;
+  padding: 23px;
   background: #F2F2F2;
   border-radius: 10px;
 }
@@ -83,4 +84,21 @@ $yellor-color: #FFC857;
 .app__item-heading {
   @include app-font(18px, 22px);
   color: $black-color;
+  transition: all 4s ease;
+}
+
+.app__item-heading_active {
+  text-decoration: line-through;
+}
+
+.app__list {
+  height: 100%;
+  padding-bottom: 40px;
+  gap: 20px;
+  overflow-y: scroll;
+  @include app-flex(start, start, flex, column);
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }

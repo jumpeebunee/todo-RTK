@@ -1,0 +1,58 @@
+{
+  "todos": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "Create new components ",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "Improve worflow im figma",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "Create dark mode",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "Find a location",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 5,
+      "title": "Take a new task",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 8,
+      "title": "Call to my cat",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 9,
+      "title": "Create new component",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 10,
+      "title": "Screenshot the address",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 11,
+      "title": "Create custom checkbox",
+      "completed": true
+    }
+  ]
+}
