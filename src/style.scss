@@ -45,10 +45,11 @@ $yellor-color: #FFC857;
 
 .app__item {
   width: 100%;
-  display: flex;
   padding: 23px;
   background: #F2F2F2;
   border-radius: 10px;
+  position: relative;
+  @include app-flex(flex-start, flex-start, flex, column);
 }
 
 .app__item-content {
@@ -101,4 +102,29 @@ $yellor-color: #FFC857;
   &::-webkit-scrollbar {
     width: 0;
   }
+}
+
+.app__item-options {
+  visibility: hidden;
+  margin-top: 20px;
+  position: absolute;
+}
+
+.app__item-options_active {
+  visibility: visible;
+  position: relative;
+}
+
+.app__item-delete {
+  padding: 16px 40px;
+  margin-right: 20px;
+  color: $white-color;
+  background-color: $black-color;
+  border-radius: 25px;
+  @include app-font(16px, 19px, 500);
+  color: $white-color;
+}
+
+.app__item-edit {
+  @include app-font(16px, 19px);
 }

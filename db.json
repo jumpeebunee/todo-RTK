@@ -28,13 +28,13 @@
       "userId": 1,
       "id": 5,
       "title": "Take a new task",
-      "completed": true
+      "completed": false
     },
     {
       "userId": 1,
       "id": 8,
       "title": "Call to my cat",
-      "completed": true
+      "completed": false
     },
     {
       "userId": 1,
