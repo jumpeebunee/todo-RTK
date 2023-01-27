@@ -4,7 +4,7 @@
       "userId": 1,
       "id": 1,
       "title": "Create new components ",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
@@ -16,19 +16,19 @@
       "userId": 1,
       "id": 3,
       "title": "Create dark mode",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
       "id": 4,
       "title": "Find a location",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
       "id": 5,
       "title": "Take a new task",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
@@ -53,6 +53,24 @@
       "id": 11,
       "title": "Create custom checkbox",
       "completed": true
+    },
+    {
+      "title": "Create CV",
+      "completed": false,
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "hfh",
+      "completed": true,
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "title": "Buy a cat",
+      "completed": false,
+      "userId": 1,
+      "id": 14
     }
   ]
 }

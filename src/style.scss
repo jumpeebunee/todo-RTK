@@ -35,6 +35,7 @@ $yellor-color: #FFC857;
   padding: 60px;
   background-color: $white-color;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .app__heading {
@@ -93,11 +94,11 @@ $yellor-color: #FFC857;
 }
 
 .app__list {
-  height: 100%;
+  height: 85%;
   padding-bottom: 40px;
   gap: 20px;
   overflow-y: scroll;
-  @include app-flex(start, start, flex, column);
+  @include app-flex(flex-start, flex-start, flex, column);
 
   &::-webkit-scrollbar {
     width: 0;
@@ -127,4 +128,42 @@ $yellor-color: #FFC857;
 
 .app__item-edit {
   @include app-font(16px, 19px);
+}
+
+// * create-todo * //
+
+.todo-create {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px rgba(29, 41, 57, 0.1);
+}
+
+.todo-create__content {
+  padding: 13px 15px 13px 23px;
+  @include app-flex(center, space-between);
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+
+.todo-create__input {
+  background-color: transparent;
+  color: $black-color;
+  @include app-font(16px, 19px);
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.todo-create__btn {
+  width: 18px;
+  height: 15px;
+  background-image: url(./assets/create.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.todo-create__btn_active {
+  background-image: url(./assets/create-active.svg);
 }

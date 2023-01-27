@@ -19,6 +19,14 @@ export const todoApi = createApi({
         body: todo,
       }),
       invalidatesTags: ['Todo'],
+    }),
+    createNewTodo: builder.mutation<ITodo, ITodo>({
+      query: (todo) => ({
+        url: '/todos',
+        method: 'POST',
+        body: todo,
+      }),
+      invalidatesTags: ['Todo'],
     })
   })
 })
