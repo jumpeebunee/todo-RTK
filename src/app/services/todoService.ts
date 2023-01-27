@@ -12,6 +12,14 @@ export const todoApi = createApi({
       }),
       providesTags: (result) => ['Todo'],
     }),
+    changeTodoTitle: builder.mutation<ITodo, ITodo>({
+      query: (todo) => ({
+        url: `/todos/${todo.id}`,
+        method: 'PUT',
+        body: todo,
+      }),
+      invalidatesTags: ['Todo'],
+    }),
     updateTodo: builder.mutation<ITodo, ITodo>({
       query: (todo) => ({
         method: 'PUT',
@@ -27,6 +35,13 @@ export const todoApi = createApi({
         body: todo,
       }),
       invalidatesTags: ['Todo'],
-    })
+    }),
+    deleteTodo: builder.mutation<ITodo, ITodo>({
+      query: (todo) => ({
+        url: `/todos/${todo.id}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['Todo'],
+    }),
   })
 })

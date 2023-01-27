@@ -21,7 +21,7 @@ const TodoCreate = () => {
           onChange={(e) => setTodoContent(e.target.value)}
           placeholder="Add new"
           className="todo-create__input"
-          maxLength={25}
+          maxLength={20}
           type="text"
         />
         <button

@@ -12,7 +12,7 @@ const TodoList = () => {
           todo={todo}
           key={todo.id}
         />
-      )}
+      )} 
     </ul>
   )
 }

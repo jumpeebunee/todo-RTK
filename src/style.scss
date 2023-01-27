@@ -36,6 +36,7 @@ $yellor-color: #FFC857;
   background-color: $white-color;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 .app__heading {
@@ -50,6 +51,7 @@ $yellor-color: #FFC857;
   background: #F2F2F2;
   border-radius: 10px;
   position: relative;
+  cursor: pointer;
   @include app-flex(flex-start, flex-start, flex, column);
 }
 
@@ -87,6 +89,12 @@ $yellor-color: #FFC857;
   @include app-font(18px, 22px);
   color: $black-color;
   transition: all 4s ease;
+}
+
+.app__item-edit-input {
+  @include app-font(18px, 22px);
+  background-color: transparent;
+  border-bottom: solid 1px $black-color;
 }
 
 .app__item-heading_active {
