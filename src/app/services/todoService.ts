@@ -1,47 +1,47 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { ITodo } from '../../types/types';
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { ITodo } from "../../types/types";
 
 export const todoApi = createApi({
-  reducerPath: 'todoApi',
-  baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:5000'}),
-  tagTypes: ['Todo'],
+  reducerPath: "todoApi",
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
+  tagTypes: ["Todo"],
   endpoints: (builder) => ({
     fetchAllTodos: builder.query<ITodo[], string>({
       query: () => ({
-        url: '/todos',
+        url: "/todos",
       }),
-      providesTags: (result) => ['Todo'],
+      providesTags: (result) => ["Todo"],
     }),
     changeTodoTitle: builder.mutation<ITodo, ITodo>({
       query: (todo) => ({
         url: `/todos/${todo.id}`,
-        method: 'PUT',
+        method: "PUT",
         body: todo,
       }),
-      invalidatesTags: ['Todo'],
+      invalidatesTags: ["Todo"],
     }),
     updateTodo: builder.mutation<ITodo, ITodo>({
       query: (todo) => ({
-        method: 'PUT',
+        method: "PUT",
         url: `/todos/${todo.id}`,
         body: todo,
       }),
-      invalidatesTags: ['Todo'],
+      invalidatesTags: ["Todo"],
     }),
     createNewTodo: builder.mutation<ITodo, ITodo>({
       query: (todo) => ({
-        url: '/todos',
-        method: 'POST',
+        url: "/todos",
+        method: "POST",
         body: todo,
       }),
-      invalidatesTags: ['Todo'],
+      invalidatesTags: ["Todo"],
     }),
     deleteTodo: builder.mutation<ITodo, ITodo>({
       query: (todo) => ({
         url: `/todos/${todo.id}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      invalidatesTags: ['Todo'],
+      invalidatesTags: ["Todo"],
     }),
-  })
-})
+  }),
+});

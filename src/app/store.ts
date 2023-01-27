@@ -1,11 +1,12 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import { todoApi } from './services/todoService';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { todoApi } from "./services/todoService";
 
 export const store = configureStore({
   reducer: {
     [todoApi.reducerPath]: todoApi.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(todoApi.middleware),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(todoApi.middleware),
 });
 
 export type AppDispatch = typeof store.dispatch;

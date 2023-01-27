@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 * {
   font-family: Inter;
 }
 
-$grey-color: #D0D5DD;
+$grey-color: #d0d5dd;
 $black-color: #344054;
 $white-color: #ffffff;
-$yellor-color: #FFC857;
+$yellor-color: #ffc857;
 
 @mixin app-flex($ai, $jc, $dp: flex, $fd: row) {
   display: $dp;
@@ -48,7 +48,7 @@ $yellor-color: #FFC857;
 .app__item {
   width: 100%;
   padding: 23px;
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 10px;
   position: relative;
   cursor: pointer;
@@ -66,7 +66,7 @@ $yellor-color: #FFC857;
   height: 26px;
   border-radius: 50%;
   background-color: $grey-color;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
   background-position: center center;
   background-size: contain;
   cursor: pointer;
@@ -151,7 +151,7 @@ $yellor-color: #FFC857;
 .todo-create__content {
   padding: 13px 15px 13px 23px;
   @include app-flex(center, space-between);
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 10px;
 }
 
@@ -178,25 +178,24 @@ $yellor-color: #FFC857;
   background-image: url(./assets/create-active.svg);
 }
 
-
 @media (max-width: 523px) {
   .app__content {
-    max-width: 91.40vw;
+    max-width: 91.4vw;
     height: 159.46vw;
     padding: 11.47vw;
     border-radius: 1.91vw;
   }
-  
+
   .app__heading {
     margin-bottom: 4.78vw;
-    @include app-font(5.35vw, 6.50vw, 700);
+    @include app-font(5.35vw, 6.5vw, 700);
   }
-  
+
   .app__item {
-    padding: 4.40vw;
+    padding: 4.4vw;
     border-radius: 1.91vw;
   }
-  
+
   .app__item-content {
     gap: 2.68vw;
   }
@@ -206,59 +205,58 @@ $yellor-color: #FFC857;
       background-size: 2.87vw 2.68vw;
     }
   }
-  
+
   .app__item-checkbox-span {
     width: 4.97vw;
     height: 4.97vw;
   }
-  
+
   .app__item-heading {
     @include app-font(3.44vw, 4.21vw);
   }
-  
+
   .app__item-edit-input {
     @include app-font(3.44vw, 4.21vw);
   }
-  
+
   .app__list {
     padding-bottom: 7.65vw;
     gap: 3.82vw;
   }
-  
+
   .app__item-options {
     margin-top: 3.82vw;
   }
-  
+
   .app__item-delete {
     padding: 3.06vw 7.65vw;
     margin-right: 3.82vw;
     border-radius: 4.78vw;
     @include app-font(3.06vw, 3.63vw, 500);
   }
-  
+
   .app__item-edit {
     @include app-font(3.06vw, 3.63vw);
   }
-  
+
   // * create-todo * //
-  
+
   .todo-create {
     margin-bottom: 5.74vw;
     padding-bottom: 5.74vw;
   }
-  
+
   .todo-create__content {
-    padding: 2.49vw 2.87vw 2.49vw 4.40vw;
+    padding: 2.49vw 2.87vw 2.49vw 4.4vw;
     border-radius: 1.91vw;
   }
-  
+
   .todo-create__input {
     @include app-font(3.06vw, 3.63vw);
   }
-  
+
   .todo-create__btn {
     width: 3.44vw;
     height: 2.87vw;
   }
-  
 }
