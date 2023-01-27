@@ -4,19 +4,13 @@
       "userId": 1,
       "id": 1,
       "title": "Create",
-      "completed": true
-    },
-    {
-      "userId": 1,
-      "id": 2,
-      "title": "Improve worflow",
-      "completed": true
+      "completed": false
     },
     {
       "userId": 1,
       "id": 3,
       "title": "Create dark mode",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
